@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+
+
+    <style>
+
+<style>
+
+p {font-size:3px;}
+
+ul li{font-size:20px;
+background-color:paleturquoise;
+border-left:10px solid blue;
+padding:20px 20px 20px 20px;
+margin-right:20px;}
+
+ .item1{background:LightSkyBlue;
+  grid-area:ball;
+border: 2px solid black;
+height: 100%;}  
+
+.item2{background:LightSalmon;
+  grid-area:header;
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+
+
+  }
+  .item3{background:LIMEGREEN;
+  grid-area:advert;}
+  .item4{background:LightPink;
+  grid-area:content;
+  h
+  }
+
+  .item5 {
+    background: PaleGreen;
+    /* Only change code below this line */
+
+grid-area:footer;
+    
+    /* Only change code above this line */
+  }
+
+  .container {
+  	
+    min-height: 300px;
+    width: 100%;
+    background: MEDIUMAQUAMARINE
+;
+    display: grid;
+    grid-template-rows:    minmax(100px, auto);
+grid-template-columns: minmax(auto, 50%) 1fr 3em;
+    grid-gap: 10px;
+    grid-template-areas:
+      "header header header header"
+      "advert content content content"
+      "advert footer footer footer"
+      "ball ball ball ball";
+  }
+  
+    </style>
+
+  </head>
+  <body>
+  <hr>
+<br>
+<hr>
+<div class="container">
+  <div class="item1">
+
+  	<div style="border-left:10px black solid;margin:0px 20px 0px 20px;padding:0px 20px 0px 20px">
+  	<h2>Why I am interested in comp-2132</h2>
+
+  	<p style="font-size:20px;">I am taking comp2132 becuase I want to learn javascript. I have tried to learn javascript on my own, however I found it difficult to learn javascript that way, unlike with html and css where I didnt have that much trouble self teaching</p>
+  </div>
+<br>
+
+
+  </div>
+  <header class="item2">
+  	<h1 style=" margin-left: auto;
+  margin-right: auto;
+  margin-top:20px;
+  	border-left:10px green solid;
+  	padding:20px;">David Dedas blog</h1>
+
+  	<img style=" width:100px;display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:20px;
+  margin-bottom:20px;
+  width: 40%; "src="https://www.iconfinder.com/data/icons/luchesa-vol-9/128/Html-512.png">
+
+    <img style=" width:100px;display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:20px;
+  margin-bottom:20px;
+  width: 40%; "src="https://www.iconfinder.com/data/icons/web-technology-2/128/Coding-512.png">	
+
+  </header>
+
+
+
+  <aside class="item3">
+  	
+<h1 style="text-align:center;">My Programing Language knowledge</h1>
+
+<ul>
+	<li>I have taken comp-1850 and comp-1950 so I have practical knowledge of html and css, although I am a little rusty with it</li>
+	<br>
+	<br>
+	<br>
+	<br>
+	<li>I have moderate knowlage of semantic markup</li>
+	<br>
+	<br>
+	<br>
+	<br>
+    <li>I only have a novice understanding of javascript so far</li>
+
+</ul>
+
+
+  </aside>
+
+
+
+
+  <article class="item4">
+
+  	<h1 style="text-align:center;">About Me: Likes/Interests</h1>
+
+  	<img style="width:300px;padding-left:75px;"src="https://www.greenmangaming.com/newsroom/wp-content/uploads/2019/11/steam-valve-blog-1280x720.jpg">
+  	
+  	<p style="font-size:20px;text-align:center;">I like making things using cad software
+    </p>
+
+ 
+
+  </article>
+  <div class="item5">
+  	
+	<p style="font-size:20px;padding:30px;">
+		I enjoy gaming responsibly, and I would hopefully be able to make games in the near future(although this is not something i intend to make a job)
+  	</p>
+
+  </div>
+</div>
+  </body>
+</html>
