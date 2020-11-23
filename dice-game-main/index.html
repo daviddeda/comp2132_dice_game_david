@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- BCIT:COMP2132 -- Final Project -- Nov. 19. 2020 
+        Bruce Wong
+        David Deda
+        Heather Tijman              -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript: Dice Game</title>
+    <link rel="stylesheet" href="./css/dg.css">
+    <style>
+
+.imge1{width:100px;}
+.imge2{width:100px;}
+
+.dice { 
+            text-align: center; 
+            display: inline-block; 
+            margin: 10px; 
+        } 
+  
+        .butn { 
+            background: #4ecca3; 
+            font-family: "Indie Flower", cursive; 
+            border-radius: 7px; 
+            color: #ffff; 
+            font-size: 30px; 
+            padding: 16px 25px 16px 25px; 
+            text-decoration: none;
+            position:relative;
+        } 
+  
+        .butn:hover { 
+            background: #232931; 
+            text-decoration: none; 
+        } 
+
+
+    </style>
+</head>
+<body>
+<!-- start rap -->
+    <div class="rap">
+        <header>
+            <h1>JavaScript: Dice Game</h1>
+        </header>
+<!-- content -->
+        <main class='container'> 
+            <h2>Click to roll a die.</h2>               
+    <!-- start game -->
+    <div class="d1">
+        <h1>(dice here)</h1>
+
+        <button type="button" class="butn"
+        onClick="rollTheDice()"> 
+        Roll the Dice 
+    </button> 
+
+            <p>1 Itaque earum rerum hic tenetur
+      a sapiente delectus, 
+     ut aut reiciendis voluptatibus 
+     maiores alias consequatur
+      aut perferendis doloribus 
+      asperiores repellat."</p>
+    </div>
+    <div class="d2">
+        <h2>player</h2>
+            
+                <div class="dice">
+                    <p class="Player1">Player 1</p> 
+                <img class="img2" src="dice6.png">       
+                </div>
+                <p>2      
+                Itaque earum rerum hic tenetur
+      a sapiente delectus, 
+     ut aut reiciendis voluptatibus 
+     maiores alias consequatur
+      aut perferendis doloribus 
+      asperiores repellat."
+  
+      Itaque earum rerum hic tenetur
+      a sapiente delectus, 
+     ut aut reiciendis voluptatibus 
+     maiores alias consequatur
+      aut perferendis doloribus 
+      asperiores repellat."
+      Itaque earum rerum hic tenetur
+      a sapiente delectus, 
+     ut aut reiciendis voluptatibus 
+     maiores alias consequatur
+      aut perferendis doloribus 
+      asperiores repellat."
+      Itaque earum rerum hic tenetur
+      a sapiente delectus, 
+     ut aut reiciendis voluptatibus 
+     maiores alias consequatur
+      aut perferendis doloribus 
+      asperiores repellat."</p>
+    </div>
+    <div class="d3">
+        <h2>opponent</h2>
+          
+        <div class="dice">
+         <p class="Player2">Player 2</p> 
+        <img class="img1" src="dice6.png"> 
+        </div>
+
+            <p>3 Itaque earum rerum hic tenetur
+        a sapiente delectus, 
+       ut aut reiciendis voluptatibus 
+       maiores alias consequatur
+        aut perferendis doloribus 
+        asperiores repellat."
+        Itaque earum rerum hic tenetur
+        a sapiente delectus, 
+       ut aut reiciendis voluptatibus 
+       maiores alias consequatur
+        aut perferendis doloribus 
+        asperiores repellat."
+        Itaque earum rerum hic tenetur
+        a sapiente delectus, 
+       ut aut reiciendis voluptatibus 
+       maiores alias consequatur
+        aut perferendis doloribus 
+        asperiores repellat."
+        Itaque earum rerum hic tenetur
+        a sapiente delectus, 
+       ut aut reiciendis voluptatibus 
+       maiores alias consequatur
+        aut perferendis doloribus 
+        asperiores repellat."</p>
+    </div>
+    <div class="d4">
+        <div class="container2">
+            <div class="d6">
+                <h3>how to play</h3>
+                    <p>aut perferendis doloribus 
+                    asperiores repellat."</p>
+            </div>
+            <div class="d7"> 
+                <h3>how to play</h3>
+                    <p>aut perferendis doloribus 
+                    asperiores repellat."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- output -->
+            <div id="output"></div>
+        </main>    
+<!-- site author info -->
+        <footer>
+            <p id='footNote'></p>
+        </footer>
+<!-- final rap -->
+    </div>
+
+<!-- external JavaScript -->
+<script src="./js/dicegame-final.js"></script>
+<script> 
+  
+    // Player name 
+    var player1 = "Player 1"; 
+    var player2 = "Player 2"; 
+
+    // Function to roll the dice 
+    function rollTheDice() { 
+        setTimeout(function () { 
+            var randomNumber1 = Math.floor(Math.random() * 6) + 1; 
+            var randomNumber2 = Math.floor(Math.random() * 6) + 1; 
+
+            document.querySelector(".img1").setAttribute("src", 
+                "dice" + randomNumber1 + ".png"); 
+
+            document.querySelector(".img2").setAttribute("src", 
+                "dice" + randomNumber2 + ".png"); 
+
+            if (randomNumber1 === randomNumber2) { 
+                document.querySelector("h1").innerHTML = "Draw!"; 
+            } 
+
+            else if (randomNumber1 < randomNumber2) { 
+                document.querySelector("h1").innerHTML 
+                    = (player2 + " WINS!"); 
+            } 
+
+            else { 
+                document.querySelector("h1").innerHTML 
+                    = (player1 + " WINS!"); 
+            } 
+        }, 2500); 
+    } 
+</script> 
+</body>
+</html>
