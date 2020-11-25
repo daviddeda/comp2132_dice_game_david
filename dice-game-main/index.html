@@ -10,188 +10,123 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript: Dice Game</title>
     <link rel="stylesheet" href="./css/dg.css">
-    <style>
-
-.imge1{width:100px;}
-.imge2{width:100px;}
-
-.dice { 
-            text-align: center; 
-            display: inline-block; 
-            margin: 10px; 
-        } 
-  
-        .butn { 
-            background: #4ecca3; 
-            font-family: "Indie Flower", cursive; 
-            border-radius: 7px; 
-            color: #ffff; 
-            font-size: 30px; 
-            padding: 16px 25px 16px 25px; 
-            text-decoration: none;
-            position:relative;
-        } 
-  
-        .butn:hover { 
-            background: #232931; 
-            text-decoration: none; 
-        } 
-
-
-    </style>
 </head>
 <body>
 <!-- start rap -->
-    <div class="rap">
-        <header>
-            <h1>JavaScript: Dice Game</h1>
-        </header>
-<!-- content -->
-        <main class='container'> 
-            <h2>Click to roll a die.</h2>               
-    <!-- start game -->
-    <div class="d1">
-        <h1>(dice here)</h1>
+<div class="rap">
+    <header>
+        <h1>JavaScript: Dice Game</h1>
+    </header>
+    
+    <main class='container'>
+        <div class="container">
+            <div class="d1">
+<!-- instructions: how to play this dice game -->        
+                <h3>how to play</h3>
+                <p>aut perferendis doloribus 
+                    asperiores repellat."</p>  
+                
 
-        <button type="button" class="butn"
-        onClick="rollTheDice()"> 
-        Roll the Dice 
-    </button> 
-
-            <p>1 Itaque earum rerum hic tenetur
-      a sapiente delectus, 
-     ut aut reiciendis voluptatibus 
-     maiores alias consequatur
-      aut perferendis doloribus 
-      asperiores repellat."</p>
-    </div>
-    <div class="d2">
-        <h2>player</h2>
             
-                <div class="dice">
-                    <p class="Player1">Player 1</p> 
-                <img class="img2" src="dice6.png">       
+            </div>
+        </div>
+<!-- start game -->
+        <div class='container2'>
+            <div class="d2">
+<!-- dice 1 of player 1 -->
+                    <h2>dice 1</h2>
+                    <button type="button" class="butn"
+                        onClick="rollTheDice()"> 
+                        Roll the Dice 
+                    <img class="img1" src="dice6.png">
+                    <img class="img2" src="dice6.png">
+                </button> 
                 </div>
-                <p>2      
-                Itaque earum rerum hic tenetur
-      a sapiente delectus, 
-     ut aut reiciendis voluptatibus 
-     maiores alias consequatur
-      aut perferendis doloribus 
-      asperiores repellat."
-  
-      Itaque earum rerum hic tenetur
-      a sapiente delectus, 
-     ut aut reiciendis voluptatibus 
-     maiores alias consequatur
-      aut perferendis doloribus 
-      asperiores repellat."
-      Itaque earum rerum hic tenetur
-      a sapiente delectus, 
-     ut aut reiciendis voluptatibus 
-     maiores alias consequatur
-      aut perferendis doloribus 
-      asperiores repellat."
-      Itaque earum rerum hic tenetur
-      a sapiente delectus, 
-     ut aut reiciendis voluptatibus 
-     maiores alias consequatur
-      aut perferendis doloribus 
-      asperiores repellat."</p>
-    </div>
-    <div class="d3">
-        <h2>opponent</h2>
-          
-        <div class="dice">
-         <p class="Player2">Player 2</p> 
-        <img class="img1" src="dice6.png"> 
-        </div>
+                <div class="d3">
+<!-- dice 2 of player 2 -->
+                    <h2>dice 2</h2>
+                    <button type="button" class="butn"
+                        onClick="rollTheDice()"> 
+                        Roll the Dice 
+                    <img class="img3" src="dice3.png">
+                    <img class="img4" src="dice6.png">
+                </div>
+                <div class="d4">
+<!-- player 1 output -->
+                    <h2 class="Player1">player 1</h2>
+                    <p id='player1-roll'>${Player 1} rolled a...</p>
+                </div>    
+                
+                <div class="d5">
 
-            <p>3 Itaque earum rerum hic tenetur
-        a sapiente delectus, 
-       ut aut reiciendis voluptatibus 
-       maiores alias consequatur
-        aut perferendis doloribus 
-        asperiores repellat."
-        Itaque earum rerum hic tenetur
-        a sapiente delectus, 
-       ut aut reiciendis voluptatibus 
-       maiores alias consequatur
-        aut perferendis doloribus 
-        asperiores repellat."
-        Itaque earum rerum hic tenetur
-        a sapiente delectus, 
-       ut aut reiciendis voluptatibus 
-       maiores alias consequatur
-        aut perferendis doloribus 
-        asperiores repellat."
-        Itaque earum rerum hic tenetur
-        a sapiente delectus, 
-       ut aut reiciendis voluptatibus 
-       maiores alias consequatur
-        aut perferendis doloribus 
-        asperiores repellat."</p>
-    </div>
-    <div class="d4">
-        <div class="container2">
-            <div class="d6">
-                <h3>how to play</h3>
-                    <p>aut perferendis doloribus 
-                    asperiores repellat."</p>
-            </div>
-            <div class="d7"> 
-                <h3>how to play</h3>
-                    <p>aut perferendis doloribus 
-                    asperiores repellat."</p>
-            </div>
-        </div>
-    </div>
+                    <h2 class="Player2">player 2</h2>
+                    <p id='player2-roll'>${Player 2} rolled a...</p>
+            
+                </div>
+            </div>               
+            
 
-    <!-- output -->
-            <div id="output"></div>
-        </main>    
+            <div class='d1'>
+                <h2>results</h2>
+                <p id='results'>Roll to win!</p>
+            </div>                            
+                    
+    </main>    
 <!-- site author info -->
-        <footer>
-            <p id='footNote'></p>
-        </footer>
+    <footer>
+        <p id='footNote'></p>
+    </footer>
 <!-- final rap -->
-    </div>
+</div>
 
 <!-- external JavaScript -->
-<script src="./js/dicegame-final.js"></script>
-<script> 
-  
-    // Player name 
-    var player1 = "Player 1"; 
+<script>
+
+  var player1 = "Player 1"; 
     var player2 = "Player 2"; 
 
-    // Function to roll the dice 
-    function rollTheDice() { 
+function rollTheDice() { 
         setTimeout(function () { 
-            var randomNumber1 = Math.floor(Math.random() * 6) + 1; 
-            var randomNumber2 = Math.floor(Math.random() * 6) + 1; 
+            var rand1 = Math.floor(Math.random() * 6) + 1; 
+            var rand2 = Math.floor(Math.random() * 6) + 1; 
+            var rand3 = Math.floor(Math.random() * 6) + 1; 
+            var rand4 = Math.floor(Math.random() * 6) + 1;
+              
+        let player = rand1 + rand2 + 2;
+        let enemy = rand3 + rand4 + 2;
 
             document.querySelector(".img1").setAttribute("src", 
-                "dice" + randomNumber1 + ".png"); 
-
+                "dice" + rand1 + ".png"); 
+  
             document.querySelector(".img2").setAttribute("src", 
-                "dice" + randomNumber2 + ".png"); 
+                "dice" + rand2 + ".png"); 
 
-            if (randomNumber1 === randomNumber2) { 
+             document.querySelector(".img3").setAttribute("src", 
+                "dice" + rand3 + ".png"); 
+
+            document.querySelector(".img4").setAttribute("src", 
+                "dice" + rand4 + ".png");        
+  
+            if (player === enemy) { 
                 document.querySelector("h1").innerHTML = "Draw!"; 
             } 
-
-            else if (randomNumber1 < randomNumber2) { 
+  
+            else if (player < enemy) { 
                 document.querySelector("h1").innerHTML 
-                    = (player2 + " WINS!"); 
+                                = (player2 + " WINS!"); 
             } 
-
+  
             else { 
                 document.querySelector("h1").innerHTML 
-                    = (player1 + " WINS!"); 
+                                = (player1 + " WINS!"); 
             } 
         }, 2500); 
     } 
-</script> 
+
+</script>
+
+
+<script src="./js/dicegame-final.js"></script>
+
 </body>
 </html>
